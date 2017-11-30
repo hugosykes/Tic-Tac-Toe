@@ -22,13 +22,13 @@ I am going to use Node.js. Further developments to come with regards to testing 
 
 ### Nouns and verbs analysis
 
-Nouns | Verbs
--------------
-game  | play
-grid  | 
-player  |
-name  |
-box |
+| Nouns   |   Verbs |
+|---------|---------|
+|game     | play    |
+|grid     |         |
+|player   |         |
+|name     |         |
+|box      |         |
 
 ### User Stories
 
