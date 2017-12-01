@@ -18,7 +18,8 @@
 
 ### Tech Stack
 
-I am going to use Node.js. Further developments to come with regards to testing framwork and further tech needed.
+I am going to use Node.js and jQuery.
+For testing, using the zombie browser, mocha for testing framework and chai for more assertions (my preferred 'expect' over 'assert')
 
 ### Nouns and verbs analysis
 
@@ -55,3 +56,22 @@ As a player,
 So I can play an X (if I am player X),
 I want the game to know which player I am
 ```
+
+
+### Domain Modelling
+
+#### Game
+
+Game should have the two players, simply stored as strings.
+
+Game should have an instance of the grid object.
+
+#### Grid
+
+Grid should have 9 instances of the box object.
+
+Grid should contain logic for checking whether a game is won or a draw, perhaps this will be contained in a separate object.
+
+#### Box
+
+Box should have the state of either being empty or containing an X or O
