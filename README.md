@@ -18,8 +18,9 @@
 
 ### Tech Stack
 
-I am going to use Node.js and jQuery.
+I am going to use Node.js and jQuery
 For testing, using the zombie browser, mocha for testing framework and chai for more assertions (my preferred 'expect' over 'assert')
+Using Jasmine for unit testing the models
 
 ### Nouns and verbs analysis
 
