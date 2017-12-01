@@ -6,3 +6,23 @@ body {
 a {
   color: #00B7FF;
 }
+
+.gridtable {
+  border-spacing: 10px 10px;  
+}
+
+.element {
+  margin: 5px;
+  width: 200px;
+  height: 200px;
+  border: solid black;
+}
+
+.button {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+button:focus{outline:0;}
