@@ -67,6 +67,9 @@ Game should have the two players, simply stored as strings.
 
 Game should have an instance of the grid object.
 
+Nouns: player1Name, player2Name, grid
+Verbs: setPlayer1Name(), setPlayer2Name(), grid()...
+
 #### Grid
 
 Grid should have 9 instances of the box object.
@@ -74,11 +77,11 @@ Grid should have 9 instances of the box object.
 Grid should contain logic for checking whether a game is won or a draw, perhaps this will be contained in a separate object.
 
 Nouns: boxes
-Verbs: 
+Verbs: setBoxState()
 
 #### Box
 
 Box should have the state of either being empty or containing an X or O
 
 Nouns: state
-Verbs: setState
+Verbs: setState()
