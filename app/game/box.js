@@ -1,6 +1,5 @@
 'use strict';
 (function(exports) {
-
   exports.Box = function() {
 
     var _state = 'empty';
@@ -17,7 +16,5 @@
       state: state,
       setState: setState
     };
-
   };
-
 })(this);

@@ -10,9 +10,13 @@ describe('Box', function() {
     expect(box.state()).toBe('empty');
   });
 
-  it('should have state X when setState method is called', () => {
+  it('should have state X when setState method is passed X', () => {
     box.setState('X');
     expect(box.state()).toBe('X');
   });
-  
+
+  it('should have state O when setState method is passed O', () => {
+    box.setState('O');
+    expect(box.state()).toBe('O');
+  });
 });

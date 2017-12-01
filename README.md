@@ -73,6 +73,12 @@ Grid should have 9 instances of the box object.
 
 Grid should contain logic for checking whether a game is won or a draw, perhaps this will be contained in a separate object.
 
+Nouns: boxes
+Verbs: 
+
 #### Box
 
 Box should have the state of either being empty or containing an X or O
+
+Nouns: state
+Verbs: setState
