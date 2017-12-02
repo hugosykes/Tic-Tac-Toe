@@ -12,14 +12,11 @@ describe('Players', function() {
 
   before(function(done) {
     browser
-    .fill('#player-name', 'Hugo')
-    .pressButton('#name-submit', done);
-  });
-
-  before(function(done) {
+      .fill('#player-name', 'Hugo')
+      .pressButton('#name-submit');
     browser
-    .fill('#player-name', 'Tom')
-    .pressButton('#name-submit', done);
+      .fill('#player-name', 'Tom')
+      .pressButton('#name-submit', done);
   });
 
   describe('entering player names', () => {
