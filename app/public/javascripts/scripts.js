@@ -1,10 +1,11 @@
 $(document).ready(function() {
+  var game = new Game();
 
   $('#enter-name').html("Enter player one's name: <input type='text' name='player1'></input><button id='name-submit'>Submit</button>");
 
-  // $('#name-submit').click(() => {
-
-  // });
+  $('#name-submit').click(() => {
+    // game.setPlayer(1, 
+  });
 
   // var thermostat = new Thermostat();
 
