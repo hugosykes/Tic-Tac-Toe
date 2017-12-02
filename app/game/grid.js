@@ -8,11 +8,11 @@
     };
 
     function boxState(index) {
-      return _boxes[index].state();
+      return _boxes[index - 1].state();
     }
 
     function setBoxState(index, value) {
-      _boxes[index].setState(value);
+      _boxes[index - 1].setState(value);
     }
 
     return {

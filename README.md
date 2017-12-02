@@ -68,7 +68,7 @@ Game should have the two players, simply stored as strings.
 Game should have an instance of the grid object.
 
 Nouns: player1Name, player2Name, grid
-Verbs: setPlayer1Name(), setPlayer2Name(), grid()...
+Verbs: setPlayerName(number, name), grid(), setGridSquare(square, value), resetGrid(), box(index)
 
 #### Grid
 
