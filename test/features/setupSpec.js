@@ -16,8 +16,11 @@ describe('Set up', function() {
     });
 
     it('should have a place to enter the first players name', function () {
-      expect(browser.text('#enter-name')).to.include("Enter player one's name:");
+      expect(browser.text('#container')).to.include("Enter player one's name:");
     });
   });
   
+  after(function(done) {
+    this.server.close(done);
+  });
 });
