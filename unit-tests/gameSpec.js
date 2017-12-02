@@ -49,4 +49,15 @@ describe('Game', function() {
       }
     });
   });
+
+  describe('Turns', () => {
+    it("should be player one's turn to begin with", () => {
+      expect(game.whosTurn()).toBe('X');
+    });
+
+    it("should be player two's turn after a go", () => {
+      game.move(1, game.whosTurn());
+      expect(game.whosTurn()).toBe('O');
+    });
+  });
 });

@@ -4,6 +4,7 @@
     var _player1 = 'Player 1';
     var _player2 = 'Player 2';
     var _grid = new Grid();
+    var _turn = 0;
 
     function player(player) {
       if (player === 1) return _player1;
@@ -16,18 +17,24 @@
     }
 
     function box(index) {
-      return _grid.boxState(index);
+      if (_grid.boxState(index) !== 'empty') return _grid.boxState(index);
     }
 
     function move(boxIndex, value) {
+      _turn += 1;
       _grid.setBoxState(boxIndex, value);
+    }
+
+    function whosTurn() {
+      return ((_turn % 2) === 0) ? 'X' : 'O';
     }
     
     return {
       player: player,
       setPlayer: setPlayer,
       move: move,
-      box: box
+      box: box,
+      whosTurn: whosTurn
     };
   };
 })(this)
