@@ -2,17 +2,13 @@ $(document).ready(function() {
   var game = new Game();
   var nameTicker = 1;
 
-  $('#container').html("<scan id='message'>Enter player one's name: </scan><input type='text' id='player-name'></input><button id='name-submit'>Submit</button>");
-  
-  $('#name-submit').click(() => {
-    game.setPlayer(nameTicker, $('#player-name').val());
-    $('#message').text("Enter player two's name: ");
-    $('#player-name').val('');
-    nameTicker += 1;
-    if (nameTicker === 3) {
-      $('#container').html("<div id='welcome'>"+ game.player(1) + " is crosses and "+ game.player(2) + " is noughts. "+ game.player(1) + " goes first!</div>");
-    }
-  });
+  function gameOver(winner) {
+    if (winner === 'X') winner = game.player(1);
+    if (winner === 'O') winner = game.player(2);
+    game.gameOver(winner);
+    $('#welcome').text(game.winner() + " has won!");
+    $('#reset').html("<button id='resetButton'>Reset game</button>");
+  }
 
   function update() {
     $('#one').text(game.box(1));
@@ -28,10 +24,35 @@ $(document).ready(function() {
   }
 
   function checkForVictory() {
-    // [1,4,7].forEach((i) => {
-    //   if ((game.box(i) === game.box(i + 1)) && (game.box(i + 1) === game.box(i + 2))) { }
-    // });
+    [1,4,7].forEach((i) => {
+      if ((!!game.box(i)) && (game.box(i) === game.box(i + 1)) && (game.box(i + 1) === game.box(i + 2))) { gameOver(game.box(i)); }
+    });
+
+    [1,2,3].forEach((i) => {
+      if ((!!game.box(i)) && (game.box(i) === game.box(i + 3)) && (game.box(i + 3) === game.box(i + 6))) { gameOver(game.box(i)); }
+    });
+
+    if ((!!game.box(1)) && (game.box(1) === game.box(5)) && (game.box(5) === game.box(9))) { gameOver(game.box(1)); }
+    if ((!!game.box(3)) && (game.box(3) === game.box(5)) && (game.box(5) === game.box(7))) { gameOver(game.box(3)); }
   }
+
+  $('#container').html("<scan id='message'>Enter player one's name: </scan><input type='text' id='player-name'></input><button id='name-submit'>Submit</button>");
+  
+  $('#name-submit').click(() => {
+    game.setPlayer(nameTicker, $('#player-name').val());
+    $('#message').text("Enter player two's name: ");
+    $('#player-name').val('');
+    nameTicker += 1;
+    if (nameTicker === 3) {
+      $('#container').html("<div id='welcome'>"+ game.player(1) + " is crosses and "+ game.player(2) + " is noughts. "+ game.player(1) + " goes first!</div>");
+    }
+  });
+
+  $('#reset').click(() => {
+    game.reset();
+    update();
+    $('#reset').html('');
+  });
 
   $('#one').click(() => {
     game.move(1);

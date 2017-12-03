@@ -5,12 +5,12 @@ Browser.localhost('tic-tac-toe.com', 3001);
 describe('Playing', function() {
   const browser = new Browser();
 
-  before(function(done) {
+  beforeEach(function(done) {
     this.server = http.createServer(app).listen(3001);
     browser.visit('/', done);
   });
 
-  before(function(done) {
+  beforeEach(function(done) {
     browser
       .fill('#player-name', 'Hugo')
       .pressButton('#name-submit');
@@ -25,9 +25,9 @@ describe('Playing', function() {
       expect(browser.text('#one')).to.equal('X');
     });
 
-    it("should change box two from empty to O", () => {
+    it("should change box two from empty to X", () => {
       browser.pressButton('#two');
-      expect(browser.text('#two')).to.equal('O');
+      expect(browser.text('#two')).to.equal('X');
     });
 
     it("should change box three from empty to X", () => {
@@ -35,9 +35,9 @@ describe('Playing', function() {
       expect(browser.text('#three')).to.equal('X');
     });
 
-    it("should change box four from empty to O", () => {
+    it("should change box four from empty to X", () => {
       browser.pressButton('#four');
-      expect(browser.text('#four')).to.equal('O');
+      expect(browser.text('#four')).to.equal('X');
     });
 
     it("should change box five from empty to X", () => {
@@ -45,9 +45,9 @@ describe('Playing', function() {
       expect(browser.text('#five')).to.equal('X');
     });
 
-    it("should change box six from empty to O", () => {
+    it("should change box six from empty to X", () => {
       browser.pressButton('#six');
-      expect(browser.text('#six')).to.equal('O');
+      expect(browser.text('#six')).to.equal('X');
     });
 
     it("should change box seven from empty to X", () => {
@@ -55,9 +55,9 @@ describe('Playing', function() {
       expect(browser.text('#seven')).to.equal('X');
     });
 
-    it("should change box eight from empty to O", () => {
+    it("should change box eight from empty to X", () => {
       browser.pressButton('#eight');
-      expect(browser.text('#eight')).to.equal('O');
+      expect(browser.text('#eight')).to.equal('X');
     });
 
     it("should change box nine from empty to X", () => {
@@ -66,7 +66,7 @@ describe('Playing', function() {
     });
   });
 
-  after(function(done) {
+  afterEach(function(done) {
     this.server.close(done);
   });
 });
