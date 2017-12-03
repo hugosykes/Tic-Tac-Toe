@@ -18,10 +18,6 @@ describe('Playing', function() {
       .fill('#player-name', 'Tom')
       .pressButton('#name-submit', done);
   });
-
-  afterEach(function(done) {
-    browser.pressButton('#one', done);
-  });
   
   describe('clicking boxes', () => {
     it("should change box one from empty to X", () => {
@@ -29,9 +25,9 @@ describe('Playing', function() {
       expect(browser.text('#one')).to.equal('X');
     });
 
-    it("should change box two from empty to X", () => {
+    it("should change box two from empty to O", () => {
       browser.pressButton('#two');
-      expect(browser.text('#two')).to.equal('X');
+      expect(browser.text('#two')).to.equal('O');
     });
 
     it("should change box three from empty to X", () => {
@@ -39,9 +35,9 @@ describe('Playing', function() {
       expect(browser.text('#three')).to.equal('X');
     });
 
-    it("should change box four from empty to X", () => {
+    it("should change box four from empty to O", () => {
       browser.pressButton('#four');
-      expect(browser.text('#four')).to.equal('X');
+      expect(browser.text('#four')).to.equal('O');
     });
 
     it("should change box five from empty to X", () => {
@@ -49,9 +45,9 @@ describe('Playing', function() {
       expect(browser.text('#five')).to.equal('X');
     });
 
-    it("should change box six from empty to X", () => {
+    it("should change box six from empty to O", () => {
       browser.pressButton('#six');
-      expect(browser.text('#six')).to.equal('X');
+      expect(browser.text('#six')).to.equal('O');
     });
 
     it("should change box seven from empty to X", () => {
@@ -59,9 +55,9 @@ describe('Playing', function() {
       expect(browser.text('#seven')).to.equal('X');
     });
 
-    it("should change box eight from empty to X", () => {
+    it("should change box eight from empty to O", () => {
       browser.pressButton('#eight');
-      expect(browser.text('#eight')).to.equal('X');
+      expect(browser.text('#eight')).to.equal('O');
     });
 
     it("should change box nine from empty to X", () => {

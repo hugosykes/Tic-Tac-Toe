@@ -20,7 +20,7 @@
       if (_grid.boxState(index) !== 'empty') return _grid.boxState(index);
     }
 
-    function move(boxIndex, value) {
+    function move(boxIndex, value = whosTurn()) {
       _turn += 1;
       _grid.setBoxState(boxIndex, value);
     }

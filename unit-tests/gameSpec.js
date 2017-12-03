@@ -31,20 +31,14 @@ describe('Game', function() {
   });
 
   describe('Boxes', () => {
-    it('should return the value of a box', () => {
-      for(var i=1; i <= 9; i++) {
-        expect(game.box(i)).toBe('empty');
-      }
-    });
-
     it('should be able to set a box', () => {
       for(var i=1; i <= 9; i++) {
-        game.move(i,'X');
+        game.move(i, 'X');
         expect(game.box(i)).toBe('X');
       }
       
       for(var i=1; i <= 9; i++) {
-        game.move(i,'O');
+        game.move(i, 'O');
         expect(game.box(i)).toBe('O');
       }
     });

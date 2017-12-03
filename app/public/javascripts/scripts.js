@@ -27,47 +27,47 @@ $(document).ready(function() {
   }
 
   $('#one').click(() => {
-    game.move(1, game.whosTurn());
+    game.move(1);
     update();
   });
   
   $('#two').click(() => {
-    game.move(2, game.whosTurn());
+    game.move(2);
     update();
   });
   
   $('#three').click(() => {
-    game.move(3, game.whosTurn());
+    game.move(3);
     update();
   });
   
   $('#four').click(() => {
-    game.move(4, game.whosTurn());
+    game.move(4);
     update();
   });
   
   $('#five').click(() => {
-    game.move(5, game.whosTurn());
+    game.move(5);
     update();
   });
   
   $('#six').click(() => {
-    game.move(6, game.whosTurn());
+    game.move(6);
     update();
   });
   
   $('#seven').click(() => {
-    game.move(7, game.whosTurn());
+    game.move(7);
     update();
   });
   
   $('#eight').click(() => {
-    game.move(8, game.whosTurn());
+    game.move(8);
     update();
   });
   
   $('#nine').click(() => {
-    game.move(9, game.whosTurn());
+    game.move(9);
     update();
   });
 });
