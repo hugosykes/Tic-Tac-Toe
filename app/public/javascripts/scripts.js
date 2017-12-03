@@ -24,6 +24,13 @@ $(document).ready(function() {
     $('#seven').text(game.box(7));
     $('#eight').text(game.box(8));
     $('#nine').text(game.box(9));
+    checkForVictory();
+  }
+
+  function checkForVictory() {
+    // [1,4,7].forEach((i) => {
+    //   if ((game.box(i) === game.box(i + 1)) && (game.box(i + 1) === game.box(i + 2))) { }
+    // });
   }
 
   $('#one').click(() => {

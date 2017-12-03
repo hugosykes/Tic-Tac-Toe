@@ -54,4 +54,13 @@ describe('Game', function() {
       expect(game.whosTurn()).toBe('O');
     });
   });
+
+  describe('Game over', () => {
+    it('should report that the game is over if somebody has won', () => {
+      [1,2,3].forEach((i) => {
+        game.move(i, 'X');
+      });
+      expect(game.winner()).toBe(''); // because haven't implemented winning logic yet
+    });
+  });
 });
